@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  .rect2 {
+    width: 400px;
+    height: 100px;
+    background-color: #58315a;
+    margin: 60px auto;
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 100px;
+  }
+  
+  .days {
+    list-style: none;
+    padding: 0;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1000px;
+  }
+  
+  .days li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    font-size: 40px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .days li.today {
+    background-color: #9678af;
+    color: white;
+  }
+  
+  .days li span {
+    font-size: 30px;
+  }
+  
+ 
+
+.rect-text {
+    width: 1400px;
+    height: 1000px;
+    margin: 0 auto;
+    background-color: #fff8ed;
+    padding: 40px;
+    border-radius: 15px;
+    font-size: 30px;
+    line-height: 1.6;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+ 
+  
+  .rect-text h1 {
+    color: #622727;
+    font-size: 60px;
+    margin-bottom: 40px;
+  }
+  
+  #journalEntryText {
+    margin-top: 40px;
+  }
+  
+  
+  @media screen and (max-width: 1200px) {
+    .days {
+      max-width: 800px;
+    }
+    .days li {
+      width: 100px;
+      height: 100px;
+      font-size: 36px;
+    }
+    .rect-text {
+      max-width: 1000px;
+      font-size: 28px;
+    }
+    .rect-text h1 {
+      font-size: 42px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .rect2 {
+      width: 300px;
+      height: 80px;
+      font-size: 48px;
+      line-height: 80px;
+    }
+    .days {
+      max-width: 600px;
+    }
+    .days li {
+      width: 80px;
+      height: 80px;
+      font-size: 30px;
+    }
+    .rect-text {
+      max-width: 800px;
+      font-size: 24px;
+    }
+    .rect-text h1 {
+      font-size: 36px;
+    }
+  }
+  

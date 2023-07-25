@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="web2.css">
+</head>
+<body>
+    <div class="rect2">Journal</div>
+    <ul class="days">
+        <li data-day="0">
+            <span>Sun</span>5 </li>
+            <li data-day="1">
+                <span>Mon</span>6</li>
+        <li data-day="2">
+            <span>Tue</span>7 </li>
+            <li class="today" data-day="3">    
+                <span>Wed</span>8</li>
+        <li data-day="4">
+            <span>Thu</span>9  </li>
+    </ul>
+    <div class="rect-text">
+        <h1 class="h1"> What are three things that make you happy, and why?</h1>
+        <p id="journalEntryText">Select a day to write your journal entry.</p>
+    </div>
+</body>
+</html>
+<script>
+    const daysListItems = document.querySelectorAll('.days li');
+    const journalEntry = document.getElementById('journalEntryText');
+    const journalEntries = {
+    0: 'Today was a relaxing Sunday. I spent the day reading my favorite book.One foot in front of the other, One more step, and then one more. Jacks only thoughts were to keep moving no matter how much his body screamed to stop and rest. He s lost almost all his energy and his entire body ached beyond belief, but he forced himself to take another step. Then another. And then one more.',
+    1: 'Had a great time on Monday! Went for a walk in the park and met a friend for coffee.One foot in front of the other, One more step, and then one more. Jacks only thoughts were to keep moving no matter how much his body screamed to stop and rest. Hes lost almost all his energy and his entire body ached beyond belief, but he forced himself to take another step. Then another. And then one more.',
+    2: 'Tuesday was a productive day at work. Completed some pending tasks.One foot in front of the other, One more step, and then one more. Jacks only thoughts were to keep moving no matter how much his body screamed to stop and rest. Hes lost almost all his energy and his entire body ached beyond belief, but he forced himself to take another step. Then another. And then one more.',
+    3: 'Wednesday was a bit hectic, but I managed to complete my assignments.She looked at her student wondering if she could ever get through. "You need to learn to think for yourself," she wanted to tell him. "Your friends are holding you back and bringing you down." But she didnt because she knew his friends were all that he had and even if that meant a life of misery, he would never give them up.',
+    4: 'What do you have in mind?'
+};
+daysListItems.forEach(day => {
+    day.addEventListener('click', () => {
+        const dayNumber = day.getAttribute('data-day');
+        journalEntry.textContent = journalEntries[dayNumber];
+    });
+});
+
+
+
+
+</script>
+   
+</body>
+</html>
